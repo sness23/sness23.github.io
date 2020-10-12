@@ -4171,19 +4171,7 @@ Error: url
 
 When I try to use it.  Well, at least I can run:
 
-<pre>
 shiva 59 [~] % mtsend.py -v -B mysite
-+----+
-
-
-
-	
-	
-
-
-
-
-
 
 ## mei 23, 2003
 
@@ -4192,16 +4180,6 @@ shiva 59 [~] % mtsend.py -v -B mysite
 
 <a href="http://arrakis.ncsa.uiuc.edu/ps2/"><img alt="ps2_portrait.jpg" src="http://www.sness.net/weblog/archives/ps2_portrait.jpg" width="188" height="322" border="0" /><br />
 Scientific computing on the PS2</a>.  Neat, this is similar to what I've been working on as well.
-
-
-
-	
-	
-
-
-
-
-
 
 ## mei 22, 2003
 
