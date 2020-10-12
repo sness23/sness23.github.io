@@ -1908,59 +1908,6 @@ A laptop fuel cell!  Finally!  Here's the <a href="http://arstechnica.com/archiv
 
 
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-
-<title>snessnet: april 2003 Archives</title>
-
-<link rel="stylesheet" href="http://www.sness.net/weblog/styles-site.css" type="text/css" />
-<link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.sness.net/weblog/index.rdf" />
-<link rel="start" href="http://www.sness.net/weblog/" title="Home" />
-<link rel="prev" href="http://www.sness.net/weblog/archives/2003_03.html" title="maart 2003" />
-
-<link rel="next" href="http://www.sness.net/weblog/archives/2003_05.html" title="mei 2003" />
-
-
-<script language="javascript" type="text/javascript">
-function OpenComments (c) {
-    window.open(c,
-                    'comments',
-                    'width=480,height=480,scrollbars=yes,status=yes');
-}
-
-function OpenTrackback (c) {
-    window.open(c,
-                    'trackback',
-                    'width=480,height=480,scrollbars=yes,status=yes');
-}
-</script>
-
-</head>
-
-<body>	
-
-<div id="banner">
-<h1><a href="http://www.sness.net/weblog/" accesskey="1">snessnet</a></h1>
-<span class="description">snessnet - nice links for smart kids</span>
-
-
-<div id="container">
-
-<div class="blog">
-
-<div id="menu">
-<a href="http://www.sness.net/weblog/archives/2003_03.html">&laquo; maart 2003</a> |
-
-<a href="http://www.sness.net/weblog/">Main</a>
-| <a href="http://www.sness.net/weblog/archives/2003_05.html">mei 2003 &raquo;</a>
-
-
-
-
-
-<div class="blog">
-
 
 ## april 30, 2003
 
@@ -3751,59 +3698,6 @@ Diamond as a <a href="http://physicsweb.org/article/news/7/4/5">room temperature
 ## april 04, 2003
 
 
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-
-<title>snessnet: mei 2003 Archives</title>
-
-<link rel="stylesheet" href="http://www.sness.net/weblog/styles-site.css" type="text/css" />
-<link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.sness.net/weblog/index.rdf" />
-<link rel="start" href="http://www.sness.net/weblog/" title="Home" />
-<link rel="prev" href="http://www.sness.net/weblog/archives/2003_04.html" title="april 2003" />
-
-<link rel="next" href="http://www.sness.net/weblog/archives/2003_06.html" title="juni 2003" />
-
-
-<script language="javascript" type="text/javascript">
-function OpenComments (c) {
-    window.open(c,
-                    'comments',
-                    'width=480,height=480,scrollbars=yes,status=yes');
-}
-
-function OpenTrackback (c) {
-    window.open(c,
-                    'trackback',
-                    'width=480,height=480,scrollbars=yes,status=yes');
-}
-</script>
-
-</head>
-
-<body>	
-
-<div id="banner">
-<h1><a href="http://www.sness.net/weblog/" accesskey="1">snessnet</a></h1>
-<span class="description">snessnet - nice links for smart kids</span>
-
-
-<div id="container">
-
-<div class="blog">
-
-<div id="menu">
-<a href="http://www.sness.net/weblog/archives/2003_04.html">&laquo; april 2003</a> |
-
-<a href="http://www.sness.net/weblog/">Main</a>
-| <a href="http://www.sness.net/weblog/archives/2003_06.html">juni 2003 &raquo;</a>
-
-
-
-
-
-<div class="blog">
 
 
 ## mei 31, 2003
