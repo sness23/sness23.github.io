@@ -49,5 +49,6 @@ listening to thesushidragon stream tonight
 maybe this would be a good way of capturing notes
 for my ethnography
 
-
+so cool i pushed that with magit
+magit is pretty cool
 </pre>
