@@ -51,4 +51,9 @@ for my ethnography
 
 so cool i pushed that with magit
 magit is pretty cool
+
+quite a few keypresses but
+better than on the command line
+
+
 </pre>
