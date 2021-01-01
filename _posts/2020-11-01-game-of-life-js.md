@@ -75,10 +75,9 @@ I rewrote this in node:
             xm1 = width - 1
             for (x = 0; x < width; x++) {
                 xp1 = (x + 1) % width
-                neighbours = (
-                    a[xm1 + ym1] + a[xm1 + yyy] + a[xm1 + yp1] +
-                        a[x + ym1] + a[x + yp1] +
-                        a[xp1 + ym1] + a[xp1 + yyy] + a[xp1 + yp1])
+                neighbours = (a[xm1 + ym1] + a[xm1 + yyy] + a[xm1 + yp1] +
+                              a[x + ym1]                  + a[x + yp1]   +
+                              a[xp1 + ym1] + a[xp1 + yyy] + a[xp1 + yp1])
                 if (neighbours == 3 || (neighbours == 2 && a[yyy+x])) {
                     b[yyy+x] = 1
                 } else {
@@ -93,12 +92,10 @@ I rewrote this in node:
         console.clear()
         for (y = 0; y < height; y++) {
             yyy = y * width;
-            process.stdout.write("|")
             for (x = 0; x < width; x++) {
                 c = a[yyy+x] == 0 ? " " : "+"
                 process.stdout.write(c)
             }
-            process.stdout.write("|\n")
         }
     }
 
@@ -109,10 +106,44 @@ I rewrote this in node:
     while (true) {
         update(curr,next)
         print(next)
+        gen++
+
         update(next,curr)
         print(curr)
         gen++
     }
 
-It runs pretty quick on the command line
+It runs pretty quick on the command line even at resolutions of 400x300.  It
+does die after a while though with the following stack trace:
+
+    <--- Last few GCs --->
+
+    [271070:0x21a39b0]    27049 ms: Mark-sweep 1398.6 (1423.9) -> 1398.2 (1424.4) MB, 554.2 / 0.0 ms  (average mu = 0.127, current mu = 0.065) allocation failure scavenge might not succeed
+    [271070:0x21a39b0]    27608 ms: Mark-sweep 1398.9 (1424.4) -> 1398.4 (1424.9) MB, 552.0 / 0.0 ms  (average mu = 0.073, current mu = 0.013) allocation failure scavenge might not succeed
+
+
+    <--- JS stacktrace --->
+
+    ==== JS stack trace =========================================
+
+        0: ExitFrame [pc: 0x3ae4ec05452b]
+        1: StubFrame [pc: 0x3ae4ec07b3bd]
+    Security context: 0x0c6b00d2ee11 <JSObject>
+        2: /* anonymous */ [0x3568bbf5d7c9] [net.js:1] [bytecode=0x314a3213e449 offset=0](this=0x35e2685ea2d1 <WriteStream map = 0xb0e9bae3261>,writev=0x0f198df85c31 <false>,data=0x0f198df89d69 <String[1]:  >,encoding=0x0c6b00d72a51 <String[4]: utf8>,cb=0x35e2685f5261 <JSBoundFunction (BoundTargetFunction 0x28c1749e1649)>)
+     ...
+
+    FATAL ERROR: Ineffective mark-compacts near heap limit Allocation failed - JavaScript heap out of memory
+     1: 0x7fc69563046c node::Abort() [/lib/x86_64-linux-gnu/libnode.so.64]
+     2: 0x7fc6956304b5  [/lib/x86_64-linux-gnu/libnode.so.64]
+     3: 0x7fc69585ce6a v8::Utils::ReportOOMFailure(v8::internal::Isolate*, char const*, bool) [/lib/x86_64-linux-gnu/libnode.so.64]
+     4: 0x7fc69585d0e1 v8::internal::V8::FatalProcessOutOfMemory(v8::internal::Isolate*, char const*, bool) [/lib/x86_64-linux-gnu/libnode.so.64]
+     5: 0x7fc695bf7c66  [/lib/x86_64-linux-gnu/libnode.so.64]
+     6: 0x7fc695c09043 v8::internal::Heap::PerformGarbageCollection(v8::internal::GarbageCollector, v8::GCCallbackFlags) [/lib/x86_64-linux-gnu/libnode.so.64]
+     7: 0x7fc695c09930 v8::internal::Heap::CollectGarbage(v8::internal::AllocationSpace, v8::internal::GarbageCollectionReason, v8::GCCallbackFlags) [/lib/x86_64-linux-gnu/libnode.so.64]
+     8: 0x7fc695c0b91d v8::internal::Heap::AllocateRawWithLigthRetry(int, v8::internal::AllocationSpace, v8::internal::AllocationAlignment) [/lib/x86_64-linux-gnu/libnode.so.64]
+     9: 0x7fc695c0b975 v8::internal::Heap::AllocateRawWithRetryOrFail(int, v8::internal::AllocationSpace, v8::internal::AllocationAlignment) [/lib/x86_64-linux-gnu/libnode.so.64]
+    10: 0x7fc695bd7dda v8::internal::Factory::NewFillerObject(int, bool, v8::internal::AllocationSpace) [/lib/x86_64-linux-gnu/libnode.so.64]
+    11: 0x7fc695e6331e v8::internal::Runtime_AllocateInNewSpace(int, v8::internal::Object**, v8::internal::Isolate*) [/lib/x86_64-linux-gnu/libnode.so.64]
+    12: 0x3ae4ec05452b
+    [1]    271070 abort (core dumped)  node nodelife.js
 
