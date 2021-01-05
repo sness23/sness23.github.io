@@ -1,3 +1,13 @@
+# 2021Jan04 23:07
+
+did the commit and push with magit:
+
+    M-x magit-status
+
+    C-u S : stage all 
+    c c   : commit (C-c C-c to end)
+    P P   : push
+
 # 2021Jan04 23:00
 
 markdown is working well
