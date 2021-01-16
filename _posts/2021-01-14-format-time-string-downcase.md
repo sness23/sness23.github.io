@@ -1,3 +1,10 @@
+# jan1421 23:05
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/p5NX1FC-7-w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6bTx2-ezsyE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
 # emacs lisp
 
 i have an insert-date function
